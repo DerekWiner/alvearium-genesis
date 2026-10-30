@@ -1,0 +1,22 @@
+# Foundry generated files
+out/
+cache/
+broadcast/
+
+# Dependencies
+node_modules/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+.venv/
+venv/
+
+# OS and editor files
+.DS_Store
+.vscode/
+.idea/
