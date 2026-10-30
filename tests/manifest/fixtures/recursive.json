@@ -1,0 +1,53 @@
+{
+  "protocol": "alvearium-genesis",
+  "manifestVersion": "0.1.0",
+  "id": "urn:uuid:aaaaaaaa-bbbb-4ccc-8ddd-eeeeeeeeeeee",
+  "created": "2026-10-30T00:00:00Z",
+  "updated": "2026-10-30T01:00:00Z",
+  "revision": 2,
+  "displayName": "Independent Child Gateway",
+  "identity": {
+    "method": "example-key-method",
+    "subject": "did:example:child-123"
+  },
+  "lineage": [
+    {
+      "relationship": "spawned-from",
+      "gateway": "urn:uuid:123e4567-e89b-12d3-a456-426614174000"
+    },
+    {
+      "relationship": "forked-from",
+      "gateway": "urn:uuid:999e4567-e89b-12d3-a456-426614174000",
+      "evidence": "https://example.invalid/evidence/lineage"
+    }
+  ],
+  "interfaces": [
+    {
+      "id": "urn:uuid:11111111-2222-4333-8444-555555555555",
+      "protocol": "example-agent-interface",
+      "version": "1.0",
+      "endpoint": "https://gateway.example.invalid/agent",
+      "roles": ["discovery", "messaging"]
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "urn:example:capability:public-status",
+      "direction": "offers",
+      "description": "Returns public gateway status."
+    },
+    {
+      "id": "urn:example:capability:compute-request",
+      "direction": "requires",
+      "description": "Requires an explicitly authorised compute service."
+    }
+  ],
+  "extensions": {
+    "https://example.invalid/genesis/extensions/runtime": {
+      "critical": false,
+      "value": {
+        "family": "example-runtime"
+      }
+    }
+  }
+}
