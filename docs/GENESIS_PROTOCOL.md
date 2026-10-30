@@ -3,8 +3,8 @@
 **Document status:** Foundational protocol proposal  
 **Version:** 0.2.0-draft  
 **Maturity:** Architecture proposal, not a deployed or ratified standard  
-**Intended home:** A dedicated Alvearium Genesis repository  
-**Current location:** Staging document in the Alvearium repository pending creation or confirmation of the dedicated repository
+**Canonical repository:** https://github.com/DerekWiner/alvearium-genesis  
+**Related implementation draft:** [Gateway Manifest Specification](GATEWAY_MANIFEST_SPEC.md) and [JSON Schema](../schemas/gateway-manifest.schema.json)
 
 ## 1. Purpose
 
@@ -142,7 +142,7 @@ Candidate fields include:
 - Resource and service declarations
 - Contact, governance or recovery information where disclosed
 
-This is a candidate information model, not a final mandatory schema.
+The first provisional machine-readable definition is maintained in the [Gateway Manifest Specification](GATEWAY_MANIFEST_SPEC.md) and [JSON Schema](../schemas/gateway-manifest.schema.json). It is version 0.1.0 and is an implementation draft, not yet a ratified protocol requirement.
 
 Implementations should use namespaced extensions and declare their semantics. Unknown optional fields should not automatically invalidate a manifest. Critical fields and security-sensitive semantics must be explicitly versioned. Parsers must not silently reinterpret an unknown security-critical field as safe.
 
