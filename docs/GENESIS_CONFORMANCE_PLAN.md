@@ -51,14 +51,16 @@ A passing test demonstrates only the property and test conditions stated. It doe
 
 ### Stage A — Specification before expansion
 - Freeze no more than the initial identity, manifest and lineage vocabulary.
-- Write a manifest schema with explicit versioning and extension rules.
+- Review the provisional [Gateway Manifest Specification](GATEWAY_MANIFEST_SPEC.md) and [JSON Schema](../schemas/gateway-manifest.schema.json) against independent implementation needs.
 - Define the difference between a gateway identifier, an on-chain record and a running gateway.
+- Define canonicalisation, digest and detached-signature boundaries before relying on manifest hashes.
 - Keep the existing registry clearly labelled as a prototype.
 
 ### Stage B — Local reference implementation
-- Implement manifest parsing and validation outside the chain.
-- Add canonicalisation rules before relying on manifest hashes.
-- Add tests for unknown optional and unknown critical fields.
+- Implement manifest parsing and validation outside the chain against the provisional schema.
+- Implement RFC 8785 JSON Canonicalization Scheme and SHA-256 digest tests.
+- Reject duplicate JSON object member names before canonicalisation.
+- Add tests for unknown optional and unknown critical extensions.
 - Add a local gateway descriptor and lineage record.
 - Demonstrate two independently configured gateways.
 
